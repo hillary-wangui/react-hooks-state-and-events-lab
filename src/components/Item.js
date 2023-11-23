@@ -1,11 +1,12 @@
 import React from "react";
 
-function Item({ name, category }) {
+function Item({ name, category, cartclass,handlecart,handlebuttonname,buttonname }) {
+
   return (
-    <li className="">
+    <li onClick={handlecart} className={cartclass}>
       <span>{name}</span>
       <span className="category">{category}</span>
-      <button className="add">Add to Cart</button>
+      <button  onClick={handlebuttonname} className="add">{buttonname}</button>
     </li>
   );
 }
